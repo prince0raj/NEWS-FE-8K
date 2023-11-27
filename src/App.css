@@ -6,6 +6,7 @@
 }
 body {
   font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
 }
 p,
 h1,
@@ -112,3 +113,34 @@ a {
 }
 
 /*-----------global-----------*/
+
+@media only screen and (max-width: 680px) {
+  .flex-device {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .flex-device .text {
+    text-align: center;
+  }
+  .head .logo img {
+    width: 100%;
+  }
+  .music .text {
+    padding: 0 10px !important;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .row {
+    width: 100%;
+  }
+  .box {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .tpost .img,
+  .tpost img {
+    width: 100% !important;
+  }
+}

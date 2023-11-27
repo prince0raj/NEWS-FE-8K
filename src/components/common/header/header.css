@@ -44,12 +44,25 @@ header a {
     display: block;
     background-color: #fb4c35;
     left: 0;
-    top: 21%;
+    top: 0%;
     transition: 0.5s;
     width: 100%;
-    height: 45vh;
+    /* height: 45vh; */
     z-index: 5;
     padding: 50px;
+  }
+  header .cut-btn {
+    position: absolute;
+    display: block;
+    top: 6%;
+    transition: 0.5s;
+    width: 100%;
+    z-index: 5;
+    text-align: end;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    right: 22px;
   }
   header .navbar {
     display: flex;

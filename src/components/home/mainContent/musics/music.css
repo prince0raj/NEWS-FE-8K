@@ -21,5 +21,6 @@
   .music img,
   .music .images {
     height: 350px;
+    width: 100% !important;
   }
 }

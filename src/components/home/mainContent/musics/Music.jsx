@@ -26,7 +26,7 @@ const Music = () => {
               .map((val) => {
                 return (
                   <div className="items">
-                    <div className="box shadow flexSB">
+                    <div className="box shadow flex-device flexSB">
                       <div className="images">
                         <div className="img">
                           <img src={val.cover} alt="" />

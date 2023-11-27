@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Head from "./Head";
 import "./header.css";
+import { ImCross } from "react-icons/im";
 import { Link } from "react-router-dom";
 
 const Header = () => {
@@ -45,6 +46,13 @@ const Header = () => {
                 <i className="fa fa-bars"></i>
               )}
             </button>
+            <div
+              className="cut-btn"
+              style={!navbar ? { display: "none" } : { display: "flex" }}
+              onClick={() => setNavbar(!navbar)}
+            >
+              <ImCross />
+            </div>
           </nav>
         </div>
       </header>
