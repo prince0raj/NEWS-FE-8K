@@ -7,14 +7,13 @@ import Popular from "../popular/Popular";
 import Ppost from "../Ppost/Ppost";
 import "./style.css";
 
-const Homes = () => {
+const Homes = ({ Data, catgeory }) => {
   return (
     <>
       <main>
         <div className="container">
           <section className="mainContent">
-            <Popular />
-            <Ppost />
+            <Popular Data={Data} catgeory={catgeory} />
             <Music />
           </section>
           <section className="sideContent">

@@ -18,7 +18,7 @@ const Music = () => {
   return (
     <>
       <section className="music">
-        <Heading title="World News" />
+        <Heading title="Other News" />
         <div className="content">
           <Slider {...settings}>
             {popular

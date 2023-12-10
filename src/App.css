@@ -22,6 +22,7 @@ i {
 }
 a {
   text-decoration: none;
+  color: black;
 }
 /*-----------global-----------*/
 .container {
@@ -111,7 +112,9 @@ a {
 .shadow {
   box-shadow: rgba(0, 0, 0, 0.2) 0px 15px 10px -10px;
 }
-
+.descbot p {
+  margin-bottom: 10px;
+}
 /*-----------global-----------*/
 
 @media only screen and (max-width: 680px) {

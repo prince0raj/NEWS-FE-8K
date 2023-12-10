@@ -9,8 +9,21 @@ import { tpost } from "../../../../dummyData";
 import { todaypost } from "../../../../dummyData";
 //const allCat = [...new Set(popular.map((curEle) => curEle.catgeory))]
 //console.log(allCat)
+import { getGallary } from "../../../../Routes/getrequest";
+import { useState, useEffect } from "react";
+import { BASE_URL } from "../../../../Domain";
 
 const Side = () => {
+  const [gallery, setGalary] = useState([]);
+  useEffect(() => {
+    getGallary((err, res) => {
+      if (err) {
+        console.log("data can't get fetched");
+      } else {
+        setGalary(res.data);
+      }
+    });
+  }, []);
   const settings = {
     dots: true,
     infinite: true,
@@ -65,7 +78,7 @@ const Side = () => {
           {gallery.map((val, id) => {
             return (
               <div className="img" key={id}>
-                <img src={val.cover} alt="" />
+                <img src={`${BASE_URL}${val?.Img}`} alt="" />
               </div>
             );
           })}
