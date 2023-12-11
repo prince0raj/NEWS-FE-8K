@@ -9,7 +9,6 @@ import {
   getLifestyle,
 } from "../../../Routes/getrequest";
 const Hero = () => {
-  const [items, setIems] = useState(hero);
   const [state, setstate] = useState([]);
   let val = true;
   useEffect(() => {

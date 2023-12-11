@@ -76,6 +76,28 @@ export const getTechnoloy = async (cb) => {
       cb(err, null);
     });
 };
+export const Worldnews = async (cb) => {
+  const header = getHeaders();
+  await axios
+    .get(`${BASE_URL}/api/Worldnews`, { header })
+    .then((res) => {
+      cb(null, res);
+    })
+    .catch((err) => {
+      cb(err, null);
+    });
+};
+export const TodayPost = async (cb) => {
+  const header = getHeaders();
+  await axios
+    .get(`${BASE_URL}/api/TodayPost`, { header })
+    .then((res) => {
+      cb(null, res);
+    })
+    .catch((err) => {
+      cb(err, null);
+    });
+};
 export const getGallary = async (cb) => {
   const header = getHeaders();
   await axios

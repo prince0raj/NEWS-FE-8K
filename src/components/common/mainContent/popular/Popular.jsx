@@ -43,7 +43,7 @@ const Popular = ({ Data, catgeory }) => {
       },
     ],
   };
-  console.log(Data, catgeory);
+  // console.log(Data, catgeory);
 
   return (
     <>
