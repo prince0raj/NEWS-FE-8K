@@ -18,13 +18,6 @@ import { BASE_URL } from "../../../../Domain";
 const Popular = () => {
   const [data, setdata] = useState([]);
   const [random, setrandomdata] = useState([]);
-  const shuffleArray = (data) => {
-    for (let i = data.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [data[i], data[j]] = [data[j], data[i]];
-    }
-    return data;
-  };
   useEffect(() => {
     const fetchData = async () => {
       try {

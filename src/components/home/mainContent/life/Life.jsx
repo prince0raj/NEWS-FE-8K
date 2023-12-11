@@ -20,7 +20,7 @@ const Life = () => {
     });
   }, []);
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 3,
@@ -61,7 +61,7 @@ const Life = () => {
                 <div className="items" key={ind}>
                   <div className="box shadow">
                     <div className="images">
-                      <div className="img">
+                      <div className="img setlifeImg">
                         <img src={`${BASE_URL}${val?.cover}`} alt="" />
                       </div>
                       {/* <div class='category category1'>

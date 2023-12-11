@@ -18,7 +18,7 @@ const Music = () => {
       }
     });
   }, []);
-  console.log(state);
+  // console.log(state);
   const settings = {
     className: "center",
     centerMode: true,

@@ -9,11 +9,12 @@ import { tpost } from "../../../../dummyData";
 import { todaypost } from "../../../../dummyData";
 //const allCat = [...new Set(popular.map((curEle) => curEle.catgeory))]
 //console.log(allCat)
-import { getGallary } from "../../../../Routes/getrequest";
+import { getGallary, TodayPost } from "../../../../Routes/getrequest";
 import { useState, useEffect } from "react";
 import { BASE_URL } from "../../../../Domain";
 const Side = () => {
   const [gallery, setGalary] = useState([]);
+  const [TodayPostdata, setTodayPost] = useState([]);
   useEffect(() => {
     getGallary((err, res) => {
       if (err) {
@@ -22,8 +23,14 @@ const Side = () => {
         setGalary(res.data);
       }
     });
+    TodayPost((err, res) => {
+      if (err) {
+        console.log("data can't get fetched");
+      } else {
+        setTodayPost(res.data);
+      }
+    });
   }, []);
-  // console.log(gallery, "from");
   const settings = {
     dots: true,
     infinite: true,
@@ -42,8 +49,8 @@ const Side = () => {
   ];
   return (
     <>
-      <Heading title="Stay Connected" />
-      <SocialMedia />
+      {/* <Heading title="Stay Connected" /> */}
+      {/* <SocialMedia /> */}
 
       {/* <Heading title="Subscribe" />
 
@@ -57,8 +64,8 @@ const Side = () => {
         </form>
       </section> */}
 
-      <Tpost tpost={tpost} tittle="Recent Post" />
-      <Tpost tpost={todaypost} tittle="Todays News" />
+      <Tpost tpost={TodayPostdata} tittle="Recent Post" />
+      {/* <Tpost tpost={todaypost} tittle="Todays News" /> */}
 
       <section className="catgorys">
         <Heading title="Catgeorys" />
