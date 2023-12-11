@@ -115,6 +115,19 @@ a {
 .descbot p {
   margin-bottom: 10px;
 }
+.social-icons {
+  display: flex;
+  gap: 10px;
+  transform: translateY(3px);
+}
+.wrapperLegal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+}
 /*-----------global-----------*/
 
 @media only screen and (max-width: 680px) {

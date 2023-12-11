@@ -1,6 +1,7 @@
 import React from "react";
 import "./footer.css";
-
+import { FaInstagram } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
 const Footer = () => {
   return (
     <>
@@ -59,11 +60,27 @@ const Footer = () => {
           </div>
         </div>
       </footer>
-      <div className="legal  ">
-        <div className="container">
+      <div className="legal wrapperLegal ">
+        <div className="containerX">
           <p style={{ textAlign: "center" }}>
             © all rights reserved by Genuien News
           </p>
+        </div>
+        <div className="social-icons">
+          <a
+            href="https://instagram.com/genuinenews8?igshid=YTQwZjQ0NmI0OA=="
+            target="_blank"
+            style={{ color: "grey" }}
+          >
+            <FaInstagram />
+          </a>
+          <a
+            href="https://x.com/GenuineNews8?t=5bI_9DZJflDBqGxFuJ47xg&s=09"
+            target="_blank"
+            style={{ color: "grey" }}
+          >
+            <FaTwitter />
+          </a>
         </div>
       </div>
     </>
